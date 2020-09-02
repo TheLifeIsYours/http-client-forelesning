@@ -7,10 +7,11 @@ public class QueryString {
     private final Map<String, String> parameters = new HashMap<>();
 
     public QueryString(String queryString) {
-        for (String parameter : queryString.split("&")) {
+        String[] parts = queryString.split("&");
+        for (String parameter : parts) {
             int equalPos = parameter.indexOf('=');
             String parameterName = parameter.substring(0, equalPos);
-            String parameterValue = parameter.substring(equalPos + 1);
+            String parameterValue = parameter.substring(equalPos);
             parameters.put(parameterName, parameterValue);
         }
     }
