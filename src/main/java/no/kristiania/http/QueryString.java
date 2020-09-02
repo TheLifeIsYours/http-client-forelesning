@@ -11,7 +11,7 @@ public class QueryString {
         for (String parameter : parts) {
             int equalPos = parameter.indexOf('=');
             String parameterName = parameter.substring(0, equalPos);
-            String parameterValue = parameter.substring(equalPos);
+            String parameterValue = parameter.substring(equalPos + 1);
             parameters.put(parameterName, parameterValue);
         }
     }
