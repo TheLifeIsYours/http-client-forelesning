@@ -38,4 +38,8 @@ public class HttpClient {
     public int getResponseCode() {
         return responseCode;
     }
+
+    public String getResponseHeader(String headerName) {
+        return null;
+    }
 }
